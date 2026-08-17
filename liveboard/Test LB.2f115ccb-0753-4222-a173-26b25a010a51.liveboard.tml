@@ -1,0 +1,57 @@
+guid: 2f115ccb-0753-4222-a173-26b25a010a51
+liveboard:
+  name: Test LB
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Total Gen Duration by Gen Job ID
+      tables:
+      - id: app-ci time for consequent success runs
+        name: app-ci time for consequent success runs
+        fqn: 89b7e20b-a83d-48a0-bbf0-88b95f771218
+      search_query: "[Gen Job ID] [Total Gen Duration]"
+      answer_columns:
+      - name: Gen Job ID
+      - name: Total Total Gen Duration
+      table:
+        table_columns:
+        - column_id: Gen Job ID
+          show_headline: false
+        - column_id: Total Total Gen Duration
+          show_headline: false
+        ordered_column_ids:
+        - Gen Job ID
+        - Total Total Gen Duration
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Gen Job ID\",\"columnProperty\": {}},{\"columnId\": \"Total Total Gen Duration\",\"columnProperty\": {}}]}"
+      chart:
+        type: ADVANCED_COLUMN
+        chart_columns:
+        - column_id: Gen Job ID
+        - column_id: Total Total Gen Duration
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Gen Job ID\",\"columnProperty\": {}},{\"columnId\": \"Total Total Gen Duration\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2a9d54cf-9985-4469-9e37-30f2b869c985\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Total Gen Duration\"],\"isOpposite\": false}},{\"id\": \"e78c46b3-4431-46db-89f4-e23f21d7dcd1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Gen Job ID\"]}}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Gen Job ID
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: FLAT
+              column: Total Total Gen Duration
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+        custom_visual_props: "{}"
+        viz_style: "{}"
+      display_mode: CHART_MODE
+    viz_guid: ba33ea9e-ebfc-4039-8327-83a7359afa45
+  layout:
+    tiles:
+    - visualization_id: Viz_1
