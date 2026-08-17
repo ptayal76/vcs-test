@@ -5,6 +5,7 @@ liveboard:
   - id: Viz_1
     answer:
       name: Total Discount by Brand1
+      description: snjnajsn
       tables:
       - id: TPCH Model With Table Alias
         name: TPCH Model With Table Alias
@@ -47,7 +48,28 @@ liveboard:
           - key: trellis-by
             mode: AXIS_DRIVEN
       display_mode: CHART_MODE
+      dynamic_description: snjnajsn
     viz_guid: 5bfcfb83-6fa9-479c-a74c-b21cbcc76280
   layout:
     tiles:
     - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "true"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M
