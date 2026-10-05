@@ -1,0 +1,521 @@
+guid: 89d1d1fe-4480-4b38-8d26-9f47f6f7978f
+liveboard:
+  name: Copy of Indexing Queries Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Queries
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      search_query: "count [Query ID] [Start Time] [Start Time].daily [Is Within Time Period] = true"
+      answer_columns:
+      - name: Day(Start Time)
+      - name: Number of Query ID
+      table:
+        table_columns:
+        - column_id: Day(Start Time)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Query ID
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Day(Start Time)
+        - Number of Query ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(Start Time)
+        - column_id: Number of Query ID
+        axis_configs:
+        - x:
+          - Day(Start Time)
+          "y":
+          - Number of Query ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"kpiDisplayProperties\": {\"showChange\": true,\"changeInterpretation\": \"NEUTRAL\",\"kpiDisplayColorArray\": [\"#777E8B\",\"#777E8B\"]}},\"axisProperties\": [{\"id\": \"0451ffb9-da6b-4b94-ae43-a86d2b3f53e8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Query ID\"],\"isOpposite\": false}},{\"id\": \"98016113-329c-44c5-8327-0848c80f5697\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Start Time)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Query ID\",\"color\": \"#2770ef\"}],\"customColorSelectorArray\": [\"#777E8B\",\"#777E8B\",\"#d5e2fc\",\"#d5e2fc\"]}"
+      display_mode: CHART_MODE
+    viz_guid: ec5028e5-213a-462c-9ca3-21d5a1f6c6d1
+  - id: Viz_2
+    answer:
+      name: Failed Queries
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      search_query: "count [Query ID] [Start Time] [Start Time].daily [Is Within Time Period] = true [Query Status].error [Query Status].timeout"
+      answer_columns:
+      - name: Day(Start Time)
+      - name: Number of Query ID
+      table:
+        table_columns:
+        - column_id: Day(Start Time)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Query ID
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Day(Start Time)
+        - Number of Query ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(Start Time)
+        - column_id: Number of Query ID
+        axis_configs:
+        - x:
+          - Day(Start Time)
+          "y":
+          - Number of Query ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"kpiDisplayProperties\": {\"showChange\": true,\"changeInterpretation\": \"DOWNWARD_IS_GOOD\",\"kpiDisplayColorArray\": [\"#E22B3D\",\"#06BF7F\"]}},\"axisProperties\": [{\"id\": \"0451ffb9-da6b-4b94-ae43-a86d2b3f53e8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Query ID\"],\"isOpposite\": false}},{\"id\": \"98016113-329c-44c5-8327-0848c80f5697\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Start Time)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Query ID\",\"color\": \"#2770ef\"}],\"customColorSelectorArray\": [\"#E22B3D\",\"#06BF7F\",\"#E22B3D\",\"#06BF7F\"]}"
+      display_mode: CHART_MODE
+    viz_guid: e7b42e5d-20e2-4a58-b88c-b9c4ba6b9399
+  - id: Viz_3
+    answer:
+      name: Average Query Latency (s)
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      search_query: "[Start Time] [Start Time].daily [Is Within Time Period] = true [Query Status].ok average [Query Latency (s)]"
+      answer_columns:
+      - name: Average Query Latency (s)
+      - name: Day(Start Time)
+      table:
+        table_columns:
+        - column_id: Average Query Latency (s)
+          headline_aggregation: TABLE_AGGR
+        - column_id: Day(Start Time)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Day(Start Time)
+        - Average Query Latency (s)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Average Query Latency (s)
+        - column_id: Day(Start Time)
+        axis_configs:
+        - x:
+          - Day(Start Time)
+          "y":
+          - Average Query Latency (s)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"kpiDisplayProperties\": {\"showChange\": true,\"changeInterpretation\": \"DOWNWARD_IS_GOOD\",\"kpiDisplayColorArray\": [\"#E22B3D\",\"#06BF7F\"]}},\"axisProperties\": [{\"id\": \"9a2b53e6-79a1-49d9-ae59-147e7d7046dc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Query Latency (s)\"],\"isOpposite\": false}},{\"id\": \"fbfb3352-79d5-4ab3-8491-92a5e6876c3e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Start Time)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average Query Latency (s)\",\"color\": \"#2770ef\"}],\"customColorSelectorArray\": [\"#E22B3D\",\"#06BF7F\",\"#E22B3D\",\"#06BF7F\"]}"
+      display_mode: CHART_MODE
+    viz_guid: c65df714-e106-4a9f-b9f6-d8856606e8c6
+  - id: Viz_4
+    answer:
+      name: Maximum Query Latency (s)
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      search_query: "[Start Time] [Start Time].daily [Is Within Time Period] = true [Query Status].ok max [Query Latency (s)]"
+      answer_columns:
+      - name: Day(Start Time)
+      - name: Maximum Query Latency (s)
+      table:
+        table_columns:
+        - column_id: Day(Start Time)
+          headline_aggregation: MIN-MAX
+        - column_id: Maximum Query Latency (s)
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Day(Start Time)
+        - Maximum Query Latency (s)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(Start Time)
+        - column_id: Maximum Query Latency (s)
+        axis_configs:
+        - x:
+          - Day(Start Time)
+          "y":
+          - Maximum Query Latency (s)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"kpiDisplayProperties\": {\"showChange\": true,\"changeInterpretation\": \"DOWNWARD_IS_GOOD\",\"kpiDisplayColorArray\": [\"#E22B3D\",\"#06BF7F\"]}},\"axisProperties\": [{\"id\": \"9a2b53e6-79a1-49d9-ae59-147e7d7046dc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Maximum Query Latency (s)\"],\"isOpposite\": false}},{\"id\": \"fbfb3352-79d5-4ab3-8491-92a5e6876c3e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Start Time)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Maximum Query Latency (s)\",\"color\": \"#2770ef\"}],\"customColorSelectorArray\": [\"#E22B3D\",\"#06BF7F\",\"#E22B3D\",\"#06BF7F\"]}"
+      display_mode: CHART_MODE
+    viz_guid: 4cfc4d3d-3ca6-471b-ad22-cf527b18613e
+  - id: Viz_5
+    answer:
+      name: Success Rate over Time
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      search_query: "[Is Within Time Period] = true count [Query ID] [Start Time] [Start Time].daily [Query Status]"
+      answer_columns:
+      - name: Day(Start Time)
+      - name: Number of Query ID
+      - name: Query Status
+      table:
+        table_columns:
+        - column_id: Day(Start Time)
+          show_headline: false
+        - column_id: Number of Query ID
+          show_headline: false
+        - column_id: Query Status
+          show_headline: false
+        ordered_column_ids:
+        - Day(Start Time)
+        - Query Status
+        - Number of Query ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Day(Start Time)
+        - column_id: Number of Query ID
+        - column_id: Query Status
+        axis_configs:
+        - x:
+          - Day(Start Time)
+          "y":
+          - Number of Query ID
+          color:
+          - Query Status
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false}}},\"axisProperties\": [{\"id\": \"48e5c108-965e-4291-8293-f945efb263de\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Start Time)\"],\"name\": \"Date\"}},{\"id\": \"21ebe95f-db32-4b14-a32e-8902449f8e92\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Query ID\"],\"format\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 0.0},\"isCategoryEditable\": true},\"name\": \"Query Success Rate\",\"isOpposite\": false}}],\"systemSeriesColors\": [{\"serieName\": \"error\",\"color\": \"#48D1E0\"},{\"serieName\": \"ok\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 17e0c13e-ff77-44a0-a249-1a24435409fb
+  - id: Viz_6
+    answer:
+      name: Query Count per Connection
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      search_query: "[Is Within Time Period] = true count [Query ID] [Start Time] [Start Time].daily [Connection Name]"
+      answer_columns:
+      - name: Connection Name
+      - name: Day(Start Time)
+      - name: Number of Query ID
+      table:
+        table_columns:
+        - column_id: Connection Name
+          show_headline: false
+        - column_id: Day(Start Time)
+          show_headline: false
+        - column_id: Number of Query ID
+          show_headline: false
+        ordered_column_ids:
+        - Day(Start Time)
+        - Connection Name
+        - Number of Query ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Connection Name
+        - column_id: Day(Start Time)
+        - column_id: Number of Query ID
+        axis_configs:
+        - x:
+          - Day(Start Time)
+          "y":
+          - Number of Query ID
+          color:
+          - Connection Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false}}},\"axisProperties\": [{\"id\": \"48e5c108-965e-4291-8293-f945efb263de\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Start Time)\"],\"name\": \"Date\"}},{\"id\": \"21ebe95f-db32-4b14-a32e-8902449f8e92\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Query ID\"],\"format\": {\"category\": \"NUMBER\",\"numberFormatConfig\": {\"unit\": \"AUTO\",\"decimals\": 0.0,\"negativeValueFormat\": \"PREFIX_DASH\",\"toSeparateThousands\": true},\"isCategoryEditable\": true},\"name\": \"Number of Queries\",\"isOpposite\": false}}],\"systemSeriesColors\": [{\"serieName\": \"error\",\"color\": \"#48D1E0\"},{\"serieName\": \"ok\",\"color\": \"#2E75F0\"},{\"serieName\": \"Number of Query ID\",\"color\": \"#2E75F0\"},{\"serieName\": \"analytics\",\"color\": \"#2E75F0\"},{\"serieName\": \"credit consumption report\",\"color\": \"#48D1E0\"},{\"serieName\": \"dgp\",\"color\": \"#FCC838\"},{\"serieName\": \"ga4\",\"color\": \"#06BF7F\"},{\"serieName\": \"metrics connection\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: e78bc618-1aae-414d-8f9d-14383ddc6372
+  - id: Viz_7
+    answer:
+      name: Query Latency
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      formulas:
+      - id: formula_p90 Query Latency (s)
+        name: p90 Query Latency (s)
+        expr: "percentile ( [Query Latency (s)] , 90 , 'asc' )"
+        was_auto_generated: false
+      search_query: "[Is Within Time Period] = true [Start Time] [Start Time].daily max [Query Latency (s)] [formula_p90 Query Latency (s)] average [Query Latency (s)]"
+      answer_columns:
+      - name: Average Query Latency (s)
+      - name: Day(Start Time)
+      - name: Maximum Query Latency (s)
+      - name: p90 Query Latency (s)
+      table:
+        table_columns:
+        - column_id: Average Query Latency (s)
+          show_headline: false
+        - column_id: Day(Start Time)
+          show_headline: false
+        - column_id: Maximum Query Latency (s)
+          show_headline: false
+        - column_id: p90 Query Latency (s)
+          show_headline: false
+        ordered_column_ids:
+        - Day(Start Time)
+        - Maximum Query Latency (s)
+        - p90 Query Latency (s)
+        - Average Query Latency (s)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Average Query Latency (s)
+        - column_id: Day(Start Time)
+        - column_id: Maximum Query Latency (s)
+        - column_id: p90 Query Latency (s)
+        axis_configs:
+        - x:
+          - Day(Start Time)
+          "y":
+          - Maximum Query Latency (s)
+          - p90 Query Latency (s)
+          - Average Query Latency (s)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false}}},\"axisProperties\": [{\"id\": \"077c51dc-7a14-4ffa-ba62-d4ff60252328\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Maximum Query Latency (s)\",\"p90 Query Latency (s)\",\"Average Query Latency (s)\"],\"name\": \"Query Latency (s)\",\"isOpposite\": false}},{\"id\": \"419fafe3-8fb0-41b6-ae43-f21f2cc9fc40\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Start Time)\"],\"name\": \"Date\"}}],\"systemSeriesColors\": [{\"serieName\": \"error\",\"color\": \"#48D1E0\"},{\"serieName\": \"ok\",\"color\": \"#2E75F0\"},{\"serieName\": \"6a5cc373-7560-407a-a661-ee49eeca5826\",\"color\": \"#2E75F0\"},{\"serieName\": \"analytics\",\"color\": \"#2E75F0\"},{\"serieName\": \"credit consumption report\",\"color\": \"#48D1E0\"},{\"serieName\": \"dgp\",\"color\": \"#FCC838\"},{\"serieName\": \"ga4\",\"color\": \"#06BF7F\"},{\"serieName\": \"metrics connection\",\"color\": \"#8C62F5\"},{\"serieName\": \"Maximum Query Latency (s)\",\"color\": \"#2E75F0\"},{\"serieName\": \"p90 Query Latency (s)\",\"color\": \"#48D1E0\"},{\"serieName\": \"Average Query Latency (s)\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 0d8653b9-1f1d-4207-b1af-6501e59f4703
+  - id: Viz_8
+    answer:
+      name: Failed Queries per Connection
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      search_query: "[Is Within Time Period] = true [Start Time] [Start Time].daily [Connection Name] [Query Status].error [Query Status].timeout count [Query ID]"
+      answer_columns:
+      - name: Connection Name
+      - name: Day(Start Time)
+      - name: Number of Query ID
+      table:
+        table_columns:
+        - column_id: Connection Name
+          show_headline: false
+        - column_id: Day(Start Time)
+          show_headline: false
+        - column_id: Number of Query ID
+          show_headline: false
+        ordered_column_ids:
+        - Day(Start Time)
+        - Connection Name
+        - Number of Query ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Connection Name
+        - column_id: Day(Start Time)
+        - column_id: Number of Query ID
+        axis_configs:
+        - x:
+          - Day(Start Time)
+          "y":
+          - Number of Query ID
+          color:
+          - Connection Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false}}},\"axisProperties\": [{\"id\": \"bf72db57-44f9-48d0-a094-1c851805136d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Query ID\"],\"name\": \"Number of Failed Queries\",\"isOpposite\": false}},{\"id\": \"78f10bc2-a87a-4bc5-a7a8-8c40ab3fb829\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Start Time)\"],\"name\": \"Date\"}}],\"systemSeriesColors\": [{\"serieName\": \"error\",\"color\": \"#48D1E0\"},{\"serieName\": \"ok\",\"color\": \"#2E75F0\"},{\"serieName\": \"6a5cc373-7560-407a-a661-ee49eeca5826\",\"color\": \"#2E75F0\"},{\"serieName\": \"analytics\",\"color\": \"#2E75F0\"},{\"serieName\": \"credit consumption report\",\"color\": \"#48D1E0\"},{\"serieName\": \"dgp\",\"color\": \"#FCC838\"},{\"serieName\": \"ga4\",\"color\": \"#06BF7F\"},{\"serieName\": \"metrics connection\",\"color\": \"#8C62F5\"},{\"serieName\": \"777f1d9a-7e8d-4d96-addd-fbf32ceb80c2\",\"color\": \"#2E75F0\"},{\"serieName\": \"e3a4bd5f-4aee-4e9f-8d0c-eab124632fea\",\"color\": \"#48D1E0\"},{\"serieName\": \"Number of Query ID\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5ae491d1-af4c-4de4-b4bd-ece670127826
+  - id: Viz_9
+    answer:
+      name: Connections with Failing Queries
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      search_query: "[Is Within Time Period] = true [Connection Name] [Query Status].error [Query Status].timeout count [Query ID] [Query Status] [Error Message] sort by count [Query ID] descending"
+      answer_columns:
+      - name: Connection Name
+      - name: Error Message
+      - name: Number of Query ID
+        sort_info:
+          category: DEFAULT
+      - name: Query Status
+      table:
+        table_columns:
+        - column_id: Connection Name
+          show_headline: false
+        - column_id: Error Message
+          show_headline: false
+        - column_id: Number of Query ID
+          show_headline: false
+        - column_id: Query Status
+          show_headline: false
+        ordered_column_ids:
+        - Connection Name
+        - Query Status
+        - Error Message
+        - Number of Query ID
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Number of Query ID\",\"width\": 154.0},{\"columnId\": \"Connection Name\",\"width\": 132.0},{\"columnId\": \"Error Message\",\"width\": 510.0},{\"columnId\": \"Query Status\",\"width\": 95.0}],\"theme\": \"ZEBRA\",\"orderedColumnIds\": [\"Connection Name\",\"Query Status\",\"Error Message\",\"Number of Query ID\"]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Connection Name
+        - column_id: Error Message
+        - column_id: Number of Query ID
+        - column_id: Query Status
+        axis_configs:
+        - x:
+          - Error Message
+          "y":
+          - Number of Query ID
+          color:
+          - Query Status
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false}}},\"axisProperties\": [{\"id\": \"6e7a081c-8be6-4737-8bfb-c9ba1fee4ac3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Query ID\"],\"isOpposite\": false}},{\"id\": \"e6caff06-5eb7-4ed1-9dc5-63e6d223903e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Error Message\"]}}],\"systemSeriesColors\": [{\"serieName\": \"error\",\"color\": \"#48D1E0\"},{\"serieName\": \"ok\",\"color\": \"#2E75F0\"},{\"serieName\": \"6a5cc373-7560-407a-a661-ee49eeca5826\",\"color\": \"#2E75F0\"},{\"serieName\": \"analytics\",\"color\": \"#2E75F0\"},{\"serieName\": \"credit consumption report\",\"color\": \"#48D1E0\"},{\"serieName\": \"dgp\",\"color\": \"#FCC838\"},{\"serieName\": \"ga4\",\"color\": \"#06BF7F\"},{\"serieName\": \"metrics connection\",\"color\": \"#8C62F5\"},{\"serieName\": \"777f1d9a-7e8d-4d96-addd-fbf32ceb80c2\",\"color\": \"#2E75F0\"},{\"serieName\": \"e3a4bd5f-4aee-4e9f-8d0c-eab124632fea\",\"color\": \"#48D1E0\"},{\"serieName\": \"Number of Query ID\",\"color\": \"#06BF7F\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: c3faae98-5be5-44b3-a6e5-f06060c2d05d
+  - id: Viz_10
+    answer:
+      name: Columns with Highest Query Latency
+      tables:
+      - id: "TS: Indexing Queries WS"
+        name: "TS: Indexing Queries WS"
+        fqn: 1cafe84d-11c3-4c27-bb11-8d13449292a6
+      search_query: "[Is Within Time Period] = true [Connection Name] [Query Status].ok [Table Name] [Column Name] [Table Type] max [Query Latency (s)] top 20"
+      answer_columns:
+      - name: Column Name
+      - name: Connection Name
+      - name: Maximum Query Latency (s)
+      - name: Table Name
+      - name: Table Type
+      table:
+        table_columns:
+        - column_id: Column Name
+          show_headline: false
+        - column_id: Connection Name
+          show_headline: false
+        - column_id: Maximum Query Latency (s)
+          show_headline: false
+        - column_id: Table Name
+          show_headline: false
+        - column_id: Table Type
+          show_headline: false
+        ordered_column_ids:
+        - Connection Name
+        - Table Name
+        - Column Name
+        - Table Type
+        - Maximum Query Latency (s)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Connection Name\",\"width\": 128.0},{\"columnId\": \"Table Name\",\"width\": 208.0},{\"columnId\": \"Maximum Query Latency (s)\",\"width\": 170.0}],\"theme\": \"ZEBRA\",\"orderedColumnIds\": [\"Connection Name\"]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Column Name
+        - column_id: Connection Name
+        - column_id: Maximum Query Latency (s)
+        - column_id: Table Name
+        - column_id: Table Type
+        axis_configs:
+        - x:
+          - Table Type
+          "y":
+          - Maximum Query Latency (s)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false}}},\"axisProperties\": [{\"id\": \"acb88774-1a3a-4214-a000-6d061f1e6543\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Maximum Query Latency (s)\"],\"isOpposite\": false}},{\"id\": \"e48a8b98-d68f-45ab-bd2a-cea90728fdee\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Table Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"error\",\"color\": \"#48D1E0\"},{\"serieName\": \"ok\",\"color\": \"#2E75F0\"},{\"serieName\": \"6a5cc373-7560-407a-a661-ee49eeca5826\",\"color\": \"#2E75F0\"},{\"serieName\": \"analytics\",\"color\": \"#2E75F0\"},{\"serieName\": \"credit consumption report\",\"color\": \"#48D1E0\"},{\"serieName\": \"dgp\",\"color\": \"#FCC838\"},{\"serieName\": \"ga4\",\"color\": \"#06BF7F\"},{\"serieName\": \"metrics connection\",\"color\": \"#8C62F5\"},{\"serieName\": \"777f1d9a-7e8d-4d96-addd-fbf32ceb80c2\",\"color\": \"#2E75F0\"},{\"serieName\": \"e3a4bd5f-4aee-4e9f-8d0c-eab124632fea\",\"color\": \"#48D1E0\"},{\"serieName\": \"a20d61c3-3d38-440c-a3ec-df1ede2b2ab7\",\"color\": \"#06BF7F\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: d46408f1-dc03-41e3-b6fb-ead976d253c1
+  filters:
+  - column:
+    - Connection Name
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Table Type
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 4
+      width: 3
+    - visualization_id: Viz_2
+      x: 3
+      "y": 0
+      height: 4
+      width: 3
+    - visualization_id: Viz_3
+      x: 6
+      "y": 0
+      height: 4
+      width: 3
+    - visualization_id: Viz_4
+      x: 9
+      "y": 0
+      height: 4
+      width: 3
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 8
+      width: 6
+    - visualization_id: Viz_6
+      x: 0
+      "y": 4
+      height: 8
+      width: 6
+    - visualization_id: Viz_7
+      x: 0
+      "y": 12
+      height: 8
+      width: 6
+    - visualization_id: Viz_8
+      x: 6
+      "y": 4
+      height: 8
+      width: 6
+    - visualization_id: Viz_9
+      x: 0
+      "y": 20
+      height: 8
+      width: 12
+    - visualization_id: Viz_10
+      x: 0
+      "y": 28
+      height: 8
+      width: 12
+  parameter_overrides:
+  - key: e712da7e-0ebf-4649-8af1-ac41483fb340
+    value:
+      name: "TS: Indexing Queries WS::Time Period (days)"
+  ordered_chips:
+  - name: Connection Name
+    type: FILTER
+  - name: Table Type
+    type: FILTER
+  - name: "TS: Indexing Queries WS::Time Period (days)"
+    type: PARAMETER
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "true"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M
