@@ -1,0 +1,54 @@
+guid: c9eab176-95fb-4d54-a3e3-3a48a2a0a31e
+answer:
+  name: Copy of Answer/Pinboard - Last Access Time
+  description: Answer used to get recently used objects(Do not edit)
+  tables:
+  - id: "TS: BI Server"
+    name: "TS: BI Server"
+    fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+  search_query: "[Answer Book GUID] max [Timestamp] [Answer Book GUID] != '{null}' sort by max [Timestamp] descending [Timestamp].today [Timestamp].'last 180 days'"
+  answer_columns:
+  - name: Answer Book GUID
+  - name: Maximum Timestamp
+    sort_info:
+      category: DEFAULT
+  table:
+    table_columns:
+    - column_id: Answer Book GUID
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Maximum Timestamp
+      headline_aggregation: MAX
+    ordered_column_ids:
+    - Answer Book GUID
+    - Maximum Timestamp
+    client_state: "{\"widgetState\":{\"columns\":[{\"visibleIndex\":0.0,\"dataField\":\"Answer Book GUID\",\"dataType\":\"string\",\"visible\":true},{\"visibleIndex\":1.0,\"dataField\":\"Maximum Timestamp\",\"dataType\":\"number\",\"visible\":true}],\"searchText\":\"\",\"pageIndex\":0.0,\"pageSize\":20.0,\"allowedPageSizes\":[10.0,20.0,40.0]},\"dataOffset\":0.0}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: ADVANCED_SCATTER
+    chart_columns:
+    - column_id: Answer Book GUID
+    - column_id: Maximum Timestamp
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\",\"linkChangeColorsWithAnomaly\": true,\"showAnalyseChangeCta\": true}},\"columnProperties\": [{\"columnId\": \"Answer Book GUID\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Maximum Timestamp\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"08fd89c6-7df8-4b66-9804-2729fc9a9d4b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Maximum Timestamp\",\"Answer Book GUID\"]}}]}"
+    custom_chart_config:
+    - key: basic
+      dimensions:
+      - key: x-axis
+        axes:
+        - type: FLAT
+          column: Maximum Timestamp
+        mode: AXIS_DRIVEN
+      - key: y-axis
+        axes:
+        - type: FLAT
+          column: Answer Book GUID
+        mode: AXIS_DRIVEN
+      - key: slice
+        mode: AXIS_DRIVEN
+      - key: slice-with-color
+        mode: AXIS_DRIVEN
+    custom_visual_props: "{\"chartSettingsVersion\":\"1\"}"
+    viz_style: "{}"
+  display_mode: TABLE_MODE
+  dynamic_name: Copy of Answer/Pinboard - Last Access Time
+  dynamic_description: Answer used to get recently used objects(Do not edit)
