@@ -1,0 +1,48 @@
+obj_id: piyush-db2c2949
+model:
+  name: piyush
+  model_tables:
+  - name: 'TS: Daily Row Count External Table [Deprecated]'
+    joins:
+    - with: 'TS: External Table Info [Deprecated]'
+      referencing_join: Daily Row Count - Table Info
+  - name: 'TS: External Table Info [Deprecated]'
+  - name: 'TS: Rows of un-cached tables by Connection [Deprecated]'
+    joins:
+    - with: 'TS: Daily Row Count External Table [Deprecated]'
+      'on': '[TS\: Rows of un-cached tables by Connection \[Deprecated\]::Total row_count] = [TS\: Daily Row Count External Table \[Deprecated\]::row_count]'
+      type: INNER
+      cardinality: MANY_TO_ONE
+  columns:
+  - name: Date
+    column_id: 'TS: Daily Row Count External Table [Deprecated]::date'
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Row Count
+    column_id: 'TS: Daily Row Count External Table [Deprecated]::row_count'
+    properties:
+      column_type: MEASURE
+      aggregation: AVERAGE
+      value_casing: UNKNOWN
+  - name: Connection Id
+    column_id: 'TS: External Table Info [Deprecated]::connection_id'
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Total Row Count
+    column_id: 'TS: Rows of un-cached tables by Connection [Deprecated]::Total row_count'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      value_casing: UNKNOWN
+  - name: Day(date)
+    column_id: 'TS: Rows of un-cached tables by Connection [Deprecated]::Day(date)'
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true
