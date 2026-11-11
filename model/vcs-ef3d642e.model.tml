@@ -1,0 +1,43 @@
+obj_id: vcs-ef3d642e
+model:
+  name: vcs
+  model_tables:
+  - name: PRODUCT
+    joins:
+    - with: PRODUCTCATEGORY
+      'on': '[PRODUCT::Product Group_NAME] = [PRODUCTCATEGORY::Product Group]'
+      type: INNER
+      cardinality: MANY_TO_ONE
+    obj_id: PRODUCT-5bf9c23f
+  - name: PRODUCTCATEGORY
+    obj_id: PRODUCTCATEGORY-99e1a9dc
+  columns:
+  - name: Product Group Key
+    column_id: PRODUCT::Product Group_KEY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Product Group Name
+    column_id: PRODUCT::Product Group_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Product Key
+    column_id: PRODUCT::PRODUCT_KEY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Product Name
+    column_id: PRODUCT::PRODUCT_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Product Category
+    column_id: PRODUCTCATEGORY::Product Category
+    properties:
+      column_type: ATTRIBUTE
+  - name: Product Group
+    column_id: PRODUCTCATEGORY::Product Group
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true
