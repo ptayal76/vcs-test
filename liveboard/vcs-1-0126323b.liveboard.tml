@@ -1,0 +1,221 @@
+obj_id: vcs-1-0126323b
+liveboard:
+  name: vcs-1
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Product Category, Product Group"
+      tables:
+      - id: vcs
+        name: vcs
+        obj_id: vcs-ef3d642e
+      search_query: "[Product Category] [Product Group]"
+      answer_columns:
+      - name: Product Category
+      - name: Product Group
+      table:
+        table_columns:
+        - column_id: Product Category
+          show_headline: false
+        - column_id: Product Group
+          show_headline: false
+        ordered_column_ids:
+        - Product Category
+        - Product Group
+        client_state: ""
+      chart:
+        type: ADVANCED_SCATTER
+        chart_columns:
+        - column_id: Product Category
+        - column_id: Product Group
+        client_state: ""
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Product Category
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: FLAT
+              column: Product Group
+            mode: AXIS_DRIVEN
+          - key: slice
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+        custom_visual_props: "{\"chartSettingsVersion\":\"1\"}"
+      display_mode: TABLE_MODE
+    viz_guid: 60c0d624-7e9d-46ed-802a-c161346110ee
+  - id: Viz_2
+    answer:
+      name: Total ITEMCOUNT by Monthly DATEDELIVERED
+      tables:
+      - id: PURCHASETRANSACTIONS
+        name: PURCHASETRANSACTIONS
+        obj_id: PURCHASETRANSACTIONS-a2e93764
+      search_query: "[ITEMCOUNT] [DATEDELIVERED] [DATEDELIVERED].monthly"
+      answer_columns:
+      - name: Month(DATEDELIVERED)
+      - name: Total ITEMCOUNT
+      table:
+        table_columns:
+        - column_id: Month(DATEDELIVERED)
+          show_headline: false
+        - column_id: Total ITEMCOUNT
+          show_headline: false
+        ordered_column_ids:
+        - Month(DATEDELIVERED)
+        - Total ITEMCOUNT
+        client_state: ""
+      chart:
+        type: ADVANCED_LINE
+        chart_columns:
+        - column_id: Month(DATEDELIVERED)
+        - column_id: Total ITEMCOUNT
+        client_state: ""
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Month(DATEDELIVERED)
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: FLAT
+              column: Total ITEMCOUNT
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+        custom_visual_props: "{\"chartSettingsVersion\":\"1\"}"
+      display_mode: CHART_MODE
+    viz_guid: 2397432e-23ef-4e17-a6d4-cefbfd54608c
+  - id: Viz_3
+    answer:
+      name: Total ITEMCOUNT by Monthly DATEDELIVERED
+      tables:
+      - id: PURCHASETRANSACTIONS
+        name: PURCHASETRANSACTIONS
+        obj_id: PURCHASETRANSACTIONS-a2e93764
+      search_query: "[ITEMCOUNT] [DATEDELIVERED] [DATEDELIVERED].monthly"
+      answer_columns:
+      - name: Month(DATEDELIVERED)
+      - name: Total ITEMCOUNT
+      table:
+        table_columns:
+        - column_id: Month(DATEDELIVERED)
+          show_headline: false
+        - column_id: Total ITEMCOUNT
+          show_headline: false
+        ordered_column_ids:
+        - Month(DATEDELIVERED)
+        - Total ITEMCOUNT
+        client_state: ""
+      chart:
+        type: ADVANCED_LINE
+        chart_columns:
+        - column_id: Month(DATEDELIVERED)
+        - column_id: Total ITEMCOUNT
+        client_state: ""
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Month(DATEDELIVERED)
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: FLAT
+              column: Total ITEMCOUNT
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+        custom_visual_props: "{\"chartSettingsVersion\":\"1\"}"
+      display_mode: CHART_MODE
+    viz_guid: 0531066b-9d77-4787-9a1f-4ca02b1606fd
+  - id: Viz_4
+    answer:
+      name: "Total QTYORDERED, Total ITEMCOUNT by PRODUCT_KEY"
+      tables:
+      - id: PRODUCT
+        name: PRODUCT
+        obj_id: PRODUCT-5bf9c23f
+      - id: PURCHASETRANSACTIONS
+        name: PURCHASETRANSACTIONS
+        obj_id: PURCHASETRANSACTIONS-a2e93764
+      joins:
+      - id: FK_PURCH_PRODUCT
+        name: FK_PURCH_PRODUCT
+        source: PURCHASETRANSACTIONS
+        destination: PRODUCT
+      table_paths:
+      - id: PRODUCT_1
+        table: PRODUCT
+        join_path:
+        - join:
+          - FK_PURCH_PRODUCT
+      - id: PURCHASETRANSACTIONS_1
+        table: PURCHASETRANSACTIONS
+      search_query: "[PURCHASETRANSACTIONS_1::QTYORDERED] [PURCHASETRANSACTIONS_1::ITEMCOUNT] [PRODUCT_1::PRODUCT_KEY]"
+      answer_columns:
+      - name: PRODUCT_KEY
+      - name: Total ITEMCOUNT
+      - name: Total QTYORDERED
+      table:
+        table_columns:
+        - column_id: PRODUCT_KEY
+          show_headline: false
+        - column_id: Total ITEMCOUNT
+          show_headline: false
+        - column_id: Total QTYORDERED
+          show_headline: false
+        ordered_column_ids:
+        - PRODUCT_KEY
+        - Total QTYORDERED
+        - Total ITEMCOUNT
+        client_state: ""
+      chart:
+        type: ADVANCED_COLUMN
+        chart_columns:
+        - column_id: PRODUCT_KEY
+        - column_id: Total ITEMCOUNT
+        - column_id: Total QTYORDERED
+        client_state: ""
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: PRODUCT_KEY
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: MERGED
+              columns:
+              - Total QTYORDERED
+              - Total ITEMCOUNT
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+        custom_visual_props: "{\"chartSettingsVersion\":\"1\"}"
+      display_mode: CHART_MODE
+    viz_guid: 933fbba0-7291-4fce-ac6e-3a458961e469
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+    - visualization_id: Viz_2
+    - visualization_id: Viz_3
+    - visualization_id: Viz_4
