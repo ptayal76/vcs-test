@@ -1,0 +1,33 @@
+obj_id: t1-aad54f86
+model:
+  name: t1
+  model_tables:
+  - name: 'TS: Daily Row Count External Table [Deprecated]'
+  columns:
+  - name: Date
+    column_id: 'TS: Daily Row Count External Table [Deprecated]::date'
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Is Cached
+    column_id: 'TS: Daily Row Count External Table [Deprecated]::is_cached'
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Row Count
+    column_id: 'TS: Daily Row Count External Table [Deprecated]::row_count'
+    properties:
+      column_type: MEASURE
+      aggregation: AVERAGE
+      value_casing: UNKNOWN
+  - name: Table Id
+    column_id: 'TS: Daily Row Count External Table [Deprecated]::table_id'
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true
